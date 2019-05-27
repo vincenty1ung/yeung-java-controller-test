@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: test-web
+  profiles:
+    active: local
+
+logging:
+  path: /data/deploy/logs/
+
+###############################dubbo 配置 start ####################################
+
+dubbo:
+  monitor:
+    protocol: dubbo
+  application:
+    name: test-web
+  registry:
+    address: zookeeper://127.0.0.1:2188
+  protocol:
+    port: 20889
+    dispatcher: all
+    threadpool: fixed
+    threads: 100
+  provider:
+    group: uncle
+  consumer:
+    group: uncle
+
+
+###############################dubbo 配置 end ####################################
+go:
+  mvc:
+    filter: /*
+    allowedHeaders: /*
