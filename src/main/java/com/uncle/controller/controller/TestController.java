@@ -1,6 +1,7 @@
 package com.uncle.controller.controller;
 
 import com.uncle.components.monitor.message.api.facade.MonitorMessageFacade;
+import com.uncle.controller.controller.eo.UserEo;
 import com.uncle.core.UncleException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +30,8 @@ public class TestController {
         log.debug("这是debug的");
         log.trace("这是trace的");
         log.warn("这是warn的");
+        UserEo userEo = new UserEo("qq:66243766-953525478", "uncle.yeung.bo@gmail.com");
+        log.info("初始化用户信息[{}]",userEo);
         messageFacade.testMessageConsumer();
     }
 
