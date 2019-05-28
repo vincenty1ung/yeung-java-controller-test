@@ -24,6 +24,11 @@ public class TestController {
 
     @GetMapping("/test/test.do")
     public void test() throws UncleException {
+        log.error("这是error的");
+        log.info("这是info的");
+        log.debug("这是debug的");
+        log.trace("这是trace的");
+        log.warn("这是warn的");
         messageFacade.testMessageConsumer();
     }
 

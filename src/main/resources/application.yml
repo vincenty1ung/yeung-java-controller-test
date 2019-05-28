@@ -6,6 +6,7 @@ spring:
 
 logging:
   path: /data/deploy/logs/
+  level: info
 
 ###############################dubbo 配置 start ####################################
 
