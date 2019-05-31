@@ -1,7 +1,7 @@
 package com.uncle.controller;
 
-import com.uncle.controller.loader.archive.Archive;
-import com.uncle.controller.loader.archive.ExplodedArchive;
+import com.uncle.loader.archive.Archive;
+import com.uncle.loader.archive.ExplodedArchive;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
