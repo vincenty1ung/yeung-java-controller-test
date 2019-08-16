@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author 杨戬
  * @className DistributedRedisLock
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-8-15 17:36
  */
 

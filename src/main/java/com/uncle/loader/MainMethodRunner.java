@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * @author 杨戬
  * @className MainMethodRunner
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/31 09:59
  */
 public class MainMethodRunner {

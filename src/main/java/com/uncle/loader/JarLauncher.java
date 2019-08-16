@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 /**
  * @author 杨戬
  * @className JarLauncher
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/31 10:01
  */
 @NoArgsConstructor

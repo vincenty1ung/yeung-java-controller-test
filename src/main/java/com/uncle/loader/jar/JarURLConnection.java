@@ -9,7 +9,7 @@ import java.security.Permission;
 /**
  * @author 杨戬
  * @className JarURLConnection
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:47
  */
 final class JarURLConnection

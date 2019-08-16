@@ -11,7 +11,7 @@ import java.util.jar.Manifest;
 /**
  * @author 杨戬
  * @className JarEntry
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:28
  */
 public class JarEntry extends java.util.jar.JarEntry

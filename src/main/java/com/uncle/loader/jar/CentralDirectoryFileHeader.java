@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 /**
  * @author 杨戬
  * @className CentralDirectoryFileHeader
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:22
  */
 final class CentralDirectoryFileHeader

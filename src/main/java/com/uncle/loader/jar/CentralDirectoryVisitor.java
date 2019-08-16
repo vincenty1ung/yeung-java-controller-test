@@ -5,7 +5,7 @@ import com.uncle.loader.data.RandomAccessData;
 /**
  * @author 杨戬
  * @className CentralDirectoryVisitor
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:19
  */
 interface CentralDirectoryVisitor {

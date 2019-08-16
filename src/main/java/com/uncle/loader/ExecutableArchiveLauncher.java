@@ -9,7 +9,7 @@ import java.util.jar.Manifest;
 /**
  * @author 杨戬
  * @className ExecutableArchiveLauncher
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/31 10:00
  */
 public abstract class ExecutableArchiveLauncher

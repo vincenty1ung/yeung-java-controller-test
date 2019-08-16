@@ -11,7 +11,7 @@ import java.util.jar.Manifest;
 /**
  * @author 杨戬
  * @className ExplodedArchive
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:02
  */
 public class ExplodedArchive implements Archive {

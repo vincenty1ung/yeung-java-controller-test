@@ -21,7 +21,7 @@ import java.util.zip.ZipEntry;
 /**
  * @author 杨戬
  * @className JarFile
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:07
  */
 public class JarFile extends java.util.jar.JarFile {

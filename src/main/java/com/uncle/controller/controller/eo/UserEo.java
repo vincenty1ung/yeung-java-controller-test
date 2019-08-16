@@ -6,7 +6,7 @@ import lombok.*;
 /**
  * @author 杨戬
  * @className UserEo
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/28 18:02
  */
 @Setter

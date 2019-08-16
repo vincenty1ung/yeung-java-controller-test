@@ -9,7 +9,7 @@ import java.util.zip.InflaterInputStream;
 /**
  * @author 杨戬
  * @className ZipInflaterInputStream
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:41
  */
 public class ZipInflaterInputStream

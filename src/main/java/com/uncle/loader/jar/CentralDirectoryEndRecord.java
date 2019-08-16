@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * @author 杨戬
  * @className CentralDirectoryEndRecord
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:20
  */
 public class CentralDirectoryEndRecord {

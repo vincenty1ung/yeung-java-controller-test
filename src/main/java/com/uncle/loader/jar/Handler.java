@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 /**
  * @author 杨戬
  * @className Handler
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:45
  */
 public class Handler extends URLStreamHandler {

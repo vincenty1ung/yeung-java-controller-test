@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author 杨戬
  * @className RedissonManager
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-8-15 17:33
  */
 @Configuration

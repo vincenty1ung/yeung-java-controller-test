@@ -11,7 +11,7 @@ import java.util.concurrent.Semaphore;
 /**
  * @author 杨戬
  * @className RandomAccessDataFile
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:12
  */
 public class RandomAccessDataFile implements RandomAccessData {

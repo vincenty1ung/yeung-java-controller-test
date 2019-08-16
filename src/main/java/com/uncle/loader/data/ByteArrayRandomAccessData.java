@@ -6,7 +6,7 @@ import java.io.InputStream;
 /**
  * @author 杨戬
  * @className ByteArrayRandomAccessData
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:11
  */
 public class ByteArrayRandomAccessData implements RandomAccessData {

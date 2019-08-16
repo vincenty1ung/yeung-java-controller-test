@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 /**
  * @author 杨戬
  * @className TestController
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-8-16 15:45
  */
 @RestController

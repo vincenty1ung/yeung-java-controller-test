@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author 杨戬
  * @className CentralDirectoryParser
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:26
  */
 public class CentralDirectoryParser {

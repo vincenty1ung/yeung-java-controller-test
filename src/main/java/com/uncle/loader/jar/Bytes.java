@@ -8,7 +8,7 @@ import java.io.InputStream;
 /**
  * @author 杨戬
  * @className Bytes
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2019/5/30 17:21
  */
 final class Bytes {
