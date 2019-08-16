@@ -41,7 +41,6 @@ public class DistributedRedisLock {
         try {
             //3L==等待时间 600L==过期时间
             b = mylock.tryLock(3L, 600L, TimeUnit.SECONDS);
-            mylock.unlock();
             System.err.println("======lock====== tryLock_result " + b);
 
         } catch (InterruptedException e) {
