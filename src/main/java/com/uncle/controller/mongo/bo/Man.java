@@ -1,4 +1,4 @@
-package com.uncle.controller.mongo.test;
+package com.uncle.controller.mongo.bo;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -4,6 +4,7 @@ package com.uncle.controller.mongo.test;
 import com.alibaba.fastjson.JSON;
 import com.mongodb.*;
 import com.mongodb.client.MongoDatabase;
+import com.uncle.controller.mongo.bo.Man;
 
 import java.util.ArrayList;
 import java.util.List;
