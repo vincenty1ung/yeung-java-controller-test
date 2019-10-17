@@ -25,4 +25,5 @@ public class Man {
     private String id;
     private String name;
     private String age;
+    private Integer penisLength;
 }
