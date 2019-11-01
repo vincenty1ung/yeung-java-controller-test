@@ -28,6 +28,14 @@ public interface ManMongoService {
     Man selectByName(String name);
 
     /**
+     * 查询
+     *
+     * @param id id
+     * @return man
+     */
+    Man selectById(String id);
+
+    /**
      * 查询全部
      * @return
      */

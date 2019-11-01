@@ -31,6 +31,10 @@ public class ManMongoDAO {
         Query query = new Query(Criteria.where("name").is(name));
         return mongoTemplate.findOne(query, Man.class);
     }
+    public Man selectById(String id) {
+        Query query = new Query(Criteria.where("_id").is(id));
+        return mongoTemplate.findOne(query, Man.class);
+    }
 
     public List<Man> listAll() {
         return mongoTemplate.findAll(Man.class);

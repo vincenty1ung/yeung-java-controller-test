@@ -25,9 +25,14 @@ public class MongoTestController {
         manMongoService.insert(man);
     }
 
-    @GetMapping("/select/man")
-    public Man selectMan(String name) throws UncleException {
+    @GetMapping("/select/man/name")
+    public Man selectManByName(String name) throws UncleException {
         return manMongoService.selectByName(name);
+    }
+
+    @GetMapping("/select/man/id")
+    public Man selectManById(String id) throws UncleException {
+        return manMongoService.selectById(id);
     }
 
     @GetMapping("/list/man")

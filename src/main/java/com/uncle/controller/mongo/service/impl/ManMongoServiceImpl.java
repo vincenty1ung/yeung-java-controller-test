@@ -35,6 +35,11 @@ public class ManMongoServiceImpl implements ManMongoService {
     }
 
     @Override
+    public Man selectById(String id) {
+        return manMongoDAO.selectById(id);
+    }
+
+    @Override
     public List<Man> listAll() {
         return manMongoDAO.listAll();
     }
