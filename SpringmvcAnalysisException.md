@@ -1,4 +1,4 @@
-# spring mvc 异常处理分析
+# Spring MVC 异常处理分析
 `1.ApplicationFilterChain.internalDoFilter() 执行到L：231 servlet.service(request, response); 进入过滤链`
 ```java
 class ApplicationFilterChain{
