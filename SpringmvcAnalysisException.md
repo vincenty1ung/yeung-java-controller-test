@@ -125,7 +125,7 @@ class FrameworkServlet{
 			processRequest(request, response);
 		}
 		else {
-             //继续执行！！！有异常抛出异常
+                        //继续执行！！！有异常抛出异常
 			super.service(request, response);
 		}
 	}
@@ -146,7 +146,7 @@ class HttpServlet{
             if (lastModified == -1) {
                 // servlet doesn't support if-modified-since, no reason
                 // to go through further expensive logic
-                //继续执行！！！有异常抛出异常
+                // 继续执行！！！有异常抛出异常
                 doGet(req, resp);
             } else {
                 long ifModifiedSince;
@@ -209,7 +209,7 @@ class HttpServlet{
 ```java
 class FrameworkServlet{
 	protected final void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    //继续执行！！！有异常抛出异常
+	//继续执行！！！有异常抛出异常
         processRequest(request, response);
 	}
 }
@@ -237,7 +237,7 @@ class FrameworkServlet{
 		initContextHolders(request, localeContext, requestAttributes);
 
 		try {
-            //继续执行，有异常被捕获
+                        //继续执行，有异常被捕获
 			doService(request, response);
 		}
 		catch (ServletException ex) {
@@ -319,7 +319,7 @@ class DispatcherServlet{
 		request.setAttribute(FLASH_MAP_MANAGER_ATTRIBUTE, this.flashMapManager);
 
 		try {
-            //继续执行，有异常抛出
+                        //继续执行，有异常抛出
 			doDispatch(request, response);
 		}
 		finally {
@@ -382,7 +382,7 @@ class DispatcherServlet{
 				}
 
 				// Actually invoke the handler.
-                // 执行真正的处理方法，当出现异常时
+                                // 执行真正的处理方法，当出现异常时
 				mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 				if (asyncManager.isConcurrentHandlingStarted()) {
@@ -392,21 +392,21 @@ class DispatcherServlet{
 				applyDefaultViewName(processedRequest, mv);
 				mappedHandler.applyPostHandle(processedRequest, response, mv);
 			}
-            //捕获异常，异常不处理
+                        //捕获异常，异常不处理
 			catch (Exception ex) {
 				dispatchException = ex;
 			}
-            //错误，处理成NestedServletException（ServletException子类）
+                        //错误，处理成NestedServletException（ServletException子类）
 			catch (Throwable err) {
 				// As of 4.3, we're processing Errors thrown from handler methods as well,
 				// making them available for @ExceptionHandler methods and other scenarios.
 				dispatchException = new NestedServletException("Handler dispatch failed", err);
 			}
-            //处理后将异常抛出
+                        //处理后将异常抛出
 			processDispatchResult(processedRequest, response, mappedHandler, mv, dispatchException);
 		}
 		catch (Exception ex) {
-            //抛出异常
+                        //抛出异常
 			triggerAfterCompletion(processedRequest, response, mappedHandler, ex);
 		}
 		catch (Throwable err) {
