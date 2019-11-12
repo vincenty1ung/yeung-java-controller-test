@@ -38,5 +38,5 @@
 ##### 2.增加分布式锁demo [立即前往](./src/main/java/com/uncle/controller/redisson)
 ##### 3.springboot启动源码 [立即前往](./src/main/java/com/uncle/loader)
 ##### 4.对mongodb的实践 [立即前往](./src/main/java/com/uncle/controller/mongo)
-##### 5.Excel-Poi工具类库 [立即前往](./ExcelPoiUtil.md)
-##### 6.Spring MVC 异常处理分析 [立即前往](./SpringmvcAnalysisException.md)
+##### 5.Excel-Poi工具类库 [立即前往](./md/ExcelPoiUtil.md)
+##### 6.Spring MVC 异常处理分析 [立即前往](./md/SpringmvcAnalysisException.md)
