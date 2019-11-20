@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author 杨戬
  * @className MongoTest
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-10-17 09:52
  */
 public class MongoTest {

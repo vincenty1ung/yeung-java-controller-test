@@ -7,7 +7,7 @@ import lombok.ToString;
 /**
  * @author 杨戬
  * @className Man
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-10-17 11:17
  */
 @Getter
