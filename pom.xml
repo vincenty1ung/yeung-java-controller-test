@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>controller</artifactId>
+    <artifactId>yeung-java-controller-test</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -13,6 +13,7 @@
         <artifactId>modules</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
 
 
     <dependencies>
@@ -58,11 +59,16 @@
     </dependencies>
 
     <build>
-        <finalName>test-web</finalName>
+        <!--Please verify you invoked Maven from the correct directory.-->
+        <!--<finalName>${project.artifactId}-${project.version}</finalName>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
