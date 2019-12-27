@@ -29,8 +29,8 @@ public class JarLauncher
     }
 
     public static void main(String[] args) throws Exception {
-        JarLauncher jarLauncher = new JarLauncher();
-        jarLauncher.launch(args);
+        //JarLauncher jarLauncher = new JarLauncher();
+        //jarLauncher.launch(args);
     }
 }
 

@@ -468,7 +468,7 @@ public class PropertiesLauncher extends Launcher {
             throws Exception {
         PropertiesLauncher launcher = new PropertiesLauncher();
         args = launcher.getArgs(args);
-        launcher.launch(args);
+        //launcher.launch(args);
     }
 
     public static String toCamelCase(CharSequence string) {

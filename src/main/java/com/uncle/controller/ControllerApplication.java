@@ -26,7 +26,7 @@ import java.util.*;
 public class ControllerApplication {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        classLoaderTest(args);
+        //classLoaderTest(args);
         SpringApplication.run(ControllerApplication.class, args);
     }
 
