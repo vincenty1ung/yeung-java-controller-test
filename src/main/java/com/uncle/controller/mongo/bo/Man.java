@@ -22,8 +22,20 @@ public class Man {
      * age : 18
      */
 
+    /**
+     * id
+     */
     private String id;
+    /**
+     * 姓名
+     */
     private String name;
+    /**
+     * 年龄
+     */
     private String age;
+    /**
+     * 阴茎长度
+     */
     private Integer penisLength;
 }

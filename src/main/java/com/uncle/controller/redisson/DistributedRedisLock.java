@@ -1,6 +1,7 @@
 package com.uncle.controller.redisson;
 
 import com.sun.corba.se.impl.orbutil.concurrent.Mutex;
+import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 
@@ -12,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @email uncle.yeung.bo@gmail.com
  * @date 19-8-15 17:36
  */
-
+@Slf4j
 public class DistributedRedisLock {
    /* private DistributedRedisLock() {
     }
@@ -41,12 +42,12 @@ public class DistributedRedisLock {
         try {
             //3L==等待时间 600L==过期时间
             b = mylock.tryLock(3L, 600L, TimeUnit.SECONDS);
-            System.err.println("======lock====== tryLock_result " + b);
+            log.info("======lock====== tryLock_result {}", b);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.err.println("======lock======" + Thread.currentThread().getName());
+        log.info("======lock======{}", Thread.currentThread().getName());
         if (b) {
             return mutex;
         } else {
@@ -58,6 +59,6 @@ public class DistributedRedisLock {
         String key = LOCK_TITLE + lockName;
         RLock mylock = redissonClient.getLock(key);
         mylock.unlock();
-        System.err.println("======unlock======" + Thread.currentThread().getName());
+        log.info("======unlock======{}", Thread.currentThread().getName());
     }
 }

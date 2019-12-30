@@ -23,6 +23,12 @@ public class TestController {
     MonitorMessageFacade messageFacade;
 
 
+    /**
+     * Test-dubbo服务测试
+     *
+     * @return json->man
+     * @throws UncleException 系统异常
+     */
     @GetMapping("/test/test.do")
     public void test() throws UncleException {
         log.error("这是error的");

@@ -20,21 +20,47 @@ public class MongoTestController {
     @Resource
     private ManMongoService manMongoService;
 
+    /**
+     * Mongo-Test-增量man数据
+     *
+     * @param man json->man
+     * @throws UncleException 系统异常
+     */
     @PostMapping("/save/man")
     public void saveMan(@RequestBody Man man) throws UncleException {
         manMongoService.insert(man);
     }
 
+    /**
+     * Mongo-Test-根据name查询man数据
+     *
+     * @param name 名字
+     * @return json->man
+     * @throws UncleException 系统异常
+     */
     @GetMapping("/select/man/name")
     public Man selectManByName(String name) throws UncleException {
         return manMongoService.selectByName(name);
     }
 
+    /**
+     * Mongo-Test-根据id查询man数据
+     *
+     * @param id 名字
+     * @return json->man
+     * @throws UncleException 系统异常
+     */
     @GetMapping("/select/man/id")
     public Man selectManById(String id) throws UncleException {
         return manMongoService.selectById(id);
     }
 
+    /**
+     * Mongo-Test-获取man数据列表
+     *
+     * @return json->lsit<man>
+     * @throws UncleException 系统异常
+     */
     @GetMapping("/list/man")
     public List<Man> listAll() throws UncleException {
         return manMongoService.listAll();
