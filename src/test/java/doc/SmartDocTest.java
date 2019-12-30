@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * @author 杨戬
  * @className SmartDoc
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 19-11-14 14:48
  */
 public class SmartDocTest {
