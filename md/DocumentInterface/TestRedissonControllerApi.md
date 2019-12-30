@@ -18,7 +18,7 @@ pathValue|string|测试数据|true|-
 
 **Request-example:**
 ```
-http://172.16.19.194/test/rcg93t
+http://172.16.19.194/test/kdf7vc
 ```
 
 **Response-example:**

@@ -41,6 +41,8 @@ public class ManMongoServiceImpl implements ManMongoService {
 
     @Override
     public List<Man> listAll() {
-        return manMongoDAO.listAll();
+        List<Man> men = manMongoDAO.listAll();
+        log.info("Mans：{}", men);
+        return men;
     }
 }

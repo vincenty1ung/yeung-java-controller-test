@@ -31,9 +31,17 @@ public class Man {
      */
     private String name;
     /**
+     * 姓名
+     */
+    private String username;
+    /**
      * 年龄
      */
     private String age;
+    /**
+     * 密码
+     */
+    private String password;
     /**
      * 阴茎长度
      */

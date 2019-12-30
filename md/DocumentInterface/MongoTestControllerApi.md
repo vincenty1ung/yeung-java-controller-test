@@ -16,16 +16,20 @@ Parameter|Type|Description|Required|Since
 ---|---|---|---|---
 id|string|id|false|-
 name|string|姓名|false|-
+username|string|姓名|false|-
 age|string|年龄|false|-
+password|string|密码|false|-
 penisLength|int32|阴茎长度|false|-
 
 **Request-example:**
 ```
 {
-	"id":"72",
-	"name":"立辉.周",
-	"age":"b7mdnq",
-	"penisLength":919
+	"id":"168",
+	"name":"浩然.袁",
+	"username":"浩然.袁",
+	"age":"g65iuo",
+	"password":"felmr1",
+	"penisLength":572
 }
 ```
 
@@ -52,7 +56,7 @@ name|string|名字|true|-
 
 **Request-example:**
 ```
-http://172.16.19.194/mongo/select/man/name?name=立辉.周
+http://172.16.19.194/mongo/select/man/name?name=浩然.袁
 ```
 **Response-fields:**
 
@@ -60,16 +64,20 @@ Field | Type|Description|Since
 ---|---|---|---
 id|string|id|-
 name|string|姓名|-
+username|string|姓名|-
 age|string|年龄|-
+password|string|密码|-
 penisLength|int32|阴茎长度|-
 
 **Response-example:**
 ```
 {
-	"id":"72",
-	"name":"立辉.周",
-	"age":"ebuy1h",
-	"penisLength":890
+	"id":"168",
+	"name":"浩然.袁",
+	"username":"浩然.袁",
+	"age":"qk76sb",
+	"password":"u96kzd",
+	"penisLength":561
 }
 ```
 
@@ -91,7 +99,7 @@ id|string|名字|true|-
 
 **Request-example:**
 ```
-http://172.16.19.194/mongo/select/man/id?id=72
+http://172.16.19.194/mongo/select/man/id?id=168
 ```
 **Response-fields:**
 
@@ -99,16 +107,20 @@ Field | Type|Description|Since
 ---|---|---|---
 id|string|id|-
 name|string|姓名|-
+username|string|姓名|-
 age|string|年龄|-
+password|string|密码|-
 penisLength|int32|阴茎长度|-
 
 **Response-example:**
 ```
 {
-	"id":"72",
-	"name":"立辉.周",
-	"age":"esvhzg",
-	"penisLength":273
+	"id":"168",
+	"name":"浩然.袁",
+	"username":"浩然.袁",
+	"age":"k6bfmp",
+	"password":"r1q6db",
+	"penisLength":193
 }
 ```
 
@@ -133,17 +145,21 @@ Field | Type|Description|Since
 ---|---|---|---
 id|string|id|-
 name|string|姓名|-
+username|string|姓名|-
 age|string|年龄|-
+password|string|密码|-
 penisLength|int32|阴茎长度|-
 
 **Response-example:**
 ```
 [
 	{
-		"id":"72",
-		"name":"立辉.周",
-		"age":"42ll7k",
-		"penisLength":727
+		"id":"168",
+		"name":"浩然.袁",
+		"username":"浩然.袁",
+		"age":"4n027v",
+		"password":"ugwbbw",
+		"penisLength":775
 	}
 ]
 ```
