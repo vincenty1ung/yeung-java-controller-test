@@ -15,8 +15,8 @@ import java.util.List;
  * @date 19-10-17 14:30
  */
 @RestController
-@RequestMapping("/mongo")
-public class MongoTestController {
+@RequestMapping("/test/mongo")
+public class TestMongoController {
     @Resource
     private ManMongoService manMongoService;
 

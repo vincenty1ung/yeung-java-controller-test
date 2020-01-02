@@ -16,6 +16,7 @@ import javax.annotation.Resource;
  * @date 19-8-16 15:45
  */
 @RestController
+@RequestMapping("/test/redisson")
 @Slf4j
 public class TestRedissonController {
     @Resource
@@ -26,7 +27,7 @@ public class TestRedissonController {
      *
      * @param pathValue 测试数据
      */
-    @RequestMapping("/test/{pathValue}")
+    @RequestMapping("/data/{pathValue}")
     public void get(@PathVariable("pathValue") String pathValue) {
 
         for (int i = 0; i < 5; i++) {

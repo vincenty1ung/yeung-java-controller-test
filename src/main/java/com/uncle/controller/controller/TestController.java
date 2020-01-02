@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @email yangb@email.com
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/test/monitor")
 @Slf4j
 public class TestController {
 
@@ -29,7 +29,7 @@ public class TestController {
      * @return json->man
      * @throws UncleException 系统异常
      */
-    @GetMapping("/test/test.do")
+    @GetMapping("/message")
     public void test() throws UncleException {
         log.error("这是error的");
         log.info("这是info的");

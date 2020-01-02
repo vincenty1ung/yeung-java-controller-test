@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.uncle</groupId>
-            <artifactId>component-monitor-message-api</artifactId>
+            <artifactId>yeung-java-component-monitor-message-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
