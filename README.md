@@ -31,10 +31,11 @@
 + 对mongodb的实践
 + springmvc出现异常解析
 + Excel-Poi工具类库
++ NIO实战(文件io/socket io)
 
 
 ## 新增
-+ NIO实战(文件io/socket io)
++ 手写HashMap
 ---
 ##### 1.应用层测试demo [立即前往](./src/main/java/com/uncle/controller/controller)
 ##### 2.增加分布式锁demo [立即前往](./src/main/java/com/uncle/controller/redisson)
@@ -44,3 +45,4 @@
 ##### 6.Spring MVC 异常处理分析 [立即前往](./md/SpringmvcAnalysisException.md)
 ##### 7.银行转接清算机构枚举及测试 [立即前往](./src/main/java/com/uncle/controller/bank)
 ##### 8.NIO实战 [立即前往](./src/main/java/com/uncle/controller/nio)
+##### 9.手写HashMap [立即前往](./src/main/java/com/uncle/controller/hashmap)

@@ -49,21 +49,63 @@ public class HashMap<K, V> implements Map<K, V> {
      */
     @Override
     public V put(K k, V v) {
-        return putVal(k, v, getIndex(k, table.length));
+        return putVal(k, v, getIndex(k, table.length), hash(k.hashCode()));
     }
 
-    private V putVal(K k, V v, int index) {
+    /**
+     * get
+     *
+     * @param k
+     *            k
+     * @return
+     */
+    @Override
+    public V get(K k) {
+        // 根据 k活得当前k的 下标拿到node节点
+        // 前提:k的值相等 hashcode相等 如果node节点不存在next 直接返回value
+        // 如果node节点存在next节点 并且第一节点 没有找到符合的结果递归查找 找到满意的结果为止返回不存在返回null
+        int hash = hash(k.hashCode());
+        Node<K, V> kvNode = table[getIndex(k, table.length)];
+        if (null == kvNode) {
+            return null;
+        }
+        if (kvNode.getKey().equals(k) && hash == kvNode.hashCode) {
+            return kvNode.getValue();
+        }
+        if (kvNode.next != null) {
+            Node<K, V> next = kvNode.next;
+            while (next != null) {
+                if (next.getKey().equals(k) && hash == next.hashCode) {
+                    return next.getValue();
+                }
+                next = next.next;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 空间大小
+     *
+     * @return 空间
+     */
+    @Override
+    public int size() {
+        return size;
+    }
+
+    private V putVal(K k, V v, int index, int hashCode) {
         // 是否需要扩容
         if (isNeedForExpansion(size)) {
             carriedOutExpansion();
         }
         Node<K, V> kvNode = table[index];
         if (null == kvNode) {
-            table[index] = new Node<>(k, v, index, null);
+            table[index] = new Node<>(k, v, hashCode, null);
             size++;
         } else {
             // 处理 存在next添加到链表结尾
-            processorNext(k, v, index, (Node<K, V>)kvNode);
+            processorNext(k, v, hashCode, (Node<K, V>)kvNode);
         }
         return table[index].getValue();
     }
@@ -133,28 +175,6 @@ public class HashMap<K, V> implements Map<K, V> {
             return;
         }
         kvNode.next = new Node<>(k, v, hash, null);
-    }
-
-    /**
-     * get
-     *
-     * @param k
-     *            k
-     * @return
-     */
-    @Override
-    public V get(K k) {
-        return null;
-    }
-
-    /**
-     * 空间大小
-     *
-     * @return 空间
-     */
-    @Override
-    public int size() {
-        return size;
     }
 
     /**
@@ -263,10 +283,10 @@ public class HashMap<K, V> implements Map<K, V> {
     public static void main(String[] args) {
         // Scanner scanner=new Scanner(System.in);
         Map<String, String> stringStringMap = new HashMap<>();
-        stringStringMap.put("李文", "李文");
-        stringStringMap.put("开开", "李文");
-        stringStringMap.put("完成", "完成");
-        stringStringMap.put("王晨", "王晨");
+        stringStringMap.put("陈佩斯", "陈佩斯");
+        stringStringMap.put("宋江", "宋江");
+        stringStringMap.put("李逵", "李逵(鬼)");
+        stringStringMap.put("郭靖", "郭靖");
         stringStringMap.put("杨峰", "杨峰");
         /*        stringStringMap.put("杨峰31", "31");
         stringStringMap.put("杨峰47", "47");
@@ -276,9 +296,10 @@ public class HashMap<K, V> implements Map<K, V> {
         stringStringMap.put("杨峰82", "82");
         stringStringMap.put("杨峰56", "杨峰56");*/
         for (int i = 0; i < 2000; i++) {
-            stringStringMap.put("杨峰" + i, "杨峰" + i);
+            stringStringMap.put("杨峰" + i, "杨峰仔" + i);
         }
-        System.out.println("stringStringMap = " + stringStringMap);
+        System.out.println("stringStringMap = " + stringStringMap.get("杨峰1999"));
+        System.out.println("stringStringMap = " + stringStringMap.get("李逵"));
 
     }
 
