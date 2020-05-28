@@ -3,7 +3,7 @@ package com.uncle.controller.hashmap;
 /**
  * @author 杨戬
  * @className Map
- * @email yangb@chaosource.com
+ * @email uncle.yeung.bo@gmail.com
  * @date 2020/5/27 22:31
  */
 public interface Map<K,V> {
