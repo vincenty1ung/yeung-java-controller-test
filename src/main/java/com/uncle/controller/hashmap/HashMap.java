@@ -38,7 +38,7 @@ public class HashMap<K, V> implements Map<K, V> {
     /**
      * 操作大小
      */
-    transient int operSize;
+    transient int resultSize;
     /**
      * 改变次数
      */
@@ -102,7 +102,7 @@ public class HashMap<K, V> implements Map<K, V> {
      */
     @Override
     public int size() {
-        return operSize;
+        return resultSize;
     }
 
     private V putVal(K k, V v, int index, int hashCode) {
@@ -115,7 +115,7 @@ public class HashMap<K, V> implements Map<K, V> {
             table[index] = new Node<>(k, v, hashCode, null);
             size++;
             if (!isCarriedOutExpansionIng) {
-                operSize++;
+                resultSize++;
             }
             // System.out.println("日志：===size = " + size);
         } else {
@@ -197,7 +197,7 @@ public class HashMap<K, V> implements Map<K, V> {
         }
         kvNode.next = new Node<>(k, v, hash, null);
         if (!isCarriedOutExpansionIng) {
-            operSize++;
+            resultSize++;
         }
     }
 
