@@ -13,11 +13,12 @@ import java.util.List;
  */
 public class HashMap<K, V> implements Map<K, V> {
     /**
-     * 初始化空间
+     * 初始化空间(也就标记了以后的空间一定是偶数), 当初始容量是偶数的时候 取下标的时候 被运算对象(length-1) 一定是奇数 &的结果是 分散的, 当初始容量是奇数的时候 取下标的时候 被运算对象(length-1)
+     * 一定是偶数 &的结果是 集中的, 哈希碰撞率自然是上面的偶数的时候要小,
      */
     private final static int SIZE_TMP = 16;
     /**
-     * 负载因子
+     * 负载因子是0.75的时候，空间利用率比较高，而且避免了相当多的Hash冲突，使得底层的链表或者是红黑树的高度比较低，提升了空间效率。
      */
     private final static float EXPANSION_OF_MULTIPLES = 0.75f;
     /**
@@ -222,6 +223,16 @@ public class HashMap<K, V> implements Map<K, V> {
     private int getIndex(K k, int length) {
         int m = length - 1;
         // 取模
+        /*
+            &m ==>> table length为偶数的时候(初始化空间给的是16)
+            后续的扩容都是按照16*n,也就是length一定为偶数[16,32,48],
+            对应的m就是[15,31,47]一定为奇数,
+            经过测试当n&m运算:
+                m为偶数时,例如[1-20]&16,结果为[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,16,16,16]
+                m为奇数时,例如[1-20]&15,结果为[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0,1,2,3]
+            从以上结果可知下标的哈希碰撞率显而易见偶数非常大
+            所以初始化空间给的是偶数,在做&运算的时候用length-1操作,取出下标(index)
+        * */
         int index = hash(k.hashCode()) & m;
         System.out
             .println("日志：======下鏢：" + Math.abs(index) + "====index:" + index + "=====length:" + m + "======key：" + k);
