@@ -108,6 +108,7 @@ public class HashMap<K, V> implements Map<K, V> {
     private V putVal(K k, V v, int index, int hashCode) {
         // 是否需要扩容
         if (isNeedForExpansion(size)) {
+            System.out.println("日志:=====当前空间大小 = " + size);
             carriedOutExpansion();
         }
         Node<K, V> kvNode = table[index];
@@ -122,6 +123,7 @@ public class HashMap<K, V> implements Map<K, V> {
             // 处理存在next添加到链表结尾
             processorNext(k, v, hashCode, (Node<K, V>)kvNode);
         }
+        System.out.println("日志：======put成功:k = " + k);
         return v;
     }
 
@@ -150,10 +152,6 @@ public class HashMap<K, V> implements Map<K, V> {
             theNumberOfChanges++;
             System.out.println("日志：======開始擴容 擴容集合size：" + list.size());
             for (Node<K, V> kvNode : list) {
-                // 分离所有的Node
-                if (kvNode.next != null) {
-                    kvNode.next = null;
-                }
                 put(kvNode.getKey(), kvNode.getValue());
             }
             System.out.println("日志：======擴容結束");
@@ -320,7 +318,7 @@ public class HashMap<K, V> implements Map<K, V> {
         stringStringMap.put("杨峰91", "杨峰91");
         stringStringMap.put("杨峰82", "82");
         stringStringMap.put("杨峰56", "杨峰56");*/
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < 200; i++) {
             stringStringMap.put("小李廣" + i, "花榮" + i);
         }
         System.out.println("stringStringMap = " + stringStringMap.get("小李廣20"));
