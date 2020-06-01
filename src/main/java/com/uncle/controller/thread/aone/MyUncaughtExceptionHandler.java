@@ -1,4 +1,4 @@
-package com.uncle.controller.thread.one;
+package com.uncle.controller.thread.aone;
 
 /**
  * @author 杨戬

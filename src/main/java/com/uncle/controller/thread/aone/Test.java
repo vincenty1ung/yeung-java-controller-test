@@ -1,4 +1,4 @@
-package com.uncle.controller.thread.one;
+package com.uncle.controller.thread.aone;
 
 import com.uncle.core.SysCode;
 import com.uncle.core.UncleException;
