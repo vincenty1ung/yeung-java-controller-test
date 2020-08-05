@@ -11,8 +11,8 @@ import java.util.Arrays;
 public class BinarySearch {
     public static void main(String[] args) {
         // 二分法 算法
-        int[] a = new int[20000000];
-        for (int i = 0; i < 20000000; i++) {
+        int[] a = new int[2000];
+        for (int i = 0; i < 2000; i++) {
             a[i] = i;
         }
         System.out.println("Arrays.toString(a) = " + Arrays.toString(a));
@@ -25,7 +25,7 @@ public class BinarySearch {
         int high = length - 1;
         int count = 0;
         while (low <= high) {
-            int mid = (low + high) / 2;
+            int mid = low+((high-low)>>1);
             count++;
             System.out.println("找了" + count + "次" + "中位:" + mid);
             if (a[mid] == i) {
